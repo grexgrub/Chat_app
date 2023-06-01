@@ -8,7 +8,7 @@ $(document).ready(function (){
     
     $.ajax({
       
-      'url': 'http://192.168.1.102/Home/realtimePesan',
+      'url': 'http://localhost:8080/Home/realtimePesan',
       'data': {from : $('#sender_username').val(),to:$('#getter_username').val()},
       'method': 'post',
       'success': function(data){

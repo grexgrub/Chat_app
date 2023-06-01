@@ -17,13 +17,13 @@ $(document).ready(function(){
     const data = $(this).data('id');     
     console.log('click')
     $.ajax({
-      'url' : 'http://192.168.1.102/Home/friend',
+      'url' : 'http://localhost:8080/Home/friend',
       'data' : {data : data},
       'method' : 'post',
       'dataType' : 'json',
       'success' : function(data){
         console.log(data);
-        $('#ppmodalteman').attr("src","http://192.168.1.102/img/avatar/"+ data[0].photoProfile +"");
+        $('#ppmodalteman').attr("src","http://localhost:8080/img/avatar/"+ data[0].photoProfile +"");
         $('#exampleModalLabel').html(data[0].name);
       }    
     })
