@@ -1,0 +1,119 @@
+@use "mixin" as mix;
+@use "variabel" as varr;
+
+
+
+#Home{
+  .home-container{
+    width: 100%;
+    max-width: 700px;
+    height: 100vh;
+    .home-nav{ 
+      @include mix.flex(row,space-between,center);
+      padding: 20px;
+      width: 100%;
+      background: varr.$primary_color;
+      box-shadow: 1px 2px 2px 1px rgb($color: black, $alpha: 0.5);
+      h1{
+         color: white;
+         font-size: 20px
+      }
+      img{
+        &:hover{
+          cursor: pointer;
+        }
+      }
+      .popup{
+        @include mix.flex(column,center,center);
+        display: none;
+        position: absolute;
+        background: white;
+        transform: translate(-60%,10%);
+        a{
+          padding-left: 30px;
+          padding-right: 30px;
+          padding-top: 20px;
+          padding-bottom: 20px;
+          text-decoration: none;
+          width: 100%;
+          color: black;
+          &:hover{
+            background: varr.$secondary_color;
+          }
+        }
+      }
+    }
+    .contact{
+      width: 100%;
+      @include mix.flex(column,flex-start,center);
+      flex-direction: flex-start;
+    .users{
+      @include mix.flex($jus: space-between);
+      margin: auto;
+      margin-top: 10px;
+      padding: 10px;
+      background: varr.$secondary_color;
+      border-radius: 10px;
+      width: 95%;
+      .Friend{
+        width: 100%;
+        text-decoration: none;
+        color: black;
+        h4{
+          font-size: 25px;
+          margin-left: 20px;
+
+        }
+
+      }
+      .ppteman{
+        width: fit-content;
+      }
+      img{
+        margin-left: 10px;
+        border-radius: 10px;
+        max-width: 100%;
+        width: 50px;
+        height: 50px;
+      }
+    }
+  }
+}
+}
+
+#exampleModal{
+  .modal-body{
+    img{
+      width: 200px;
+      height: 200px;
+      max-width: 100%;
+    }
+  }
+}
+
+
+
+
+
+          .online{
+            font-size: 15px;
+            color: white;
+            background: blue;
+            padding: 2px;
+            border-radius: 8px;
+          }
+          .offline{
+            font-size: 15px;
+            color: white;
+            background: red;
+            padding: 2px;
+            border-radius: 8px;
+          }
+
+
+
+
+
+
+
+
